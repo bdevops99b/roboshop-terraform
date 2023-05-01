@@ -29,7 +29,7 @@ resource "aws_instance" "mongodb" {
   }
 }
 
-resource "aws_route53_record" "frontend" {
+resource "aws_route53_record" "mongodb" {
   zone_id = Z09749362E9LBLZIEGY8G
   name    = "mongodb-dev.pand4u.online"
   type    = "A"
