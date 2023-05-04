@@ -8,13 +8,9 @@ data "aws_security_group" "allow-all" {
   name = "allow-all"
 }
 
-variable "instance_type" {
-  default = "t3.small"
-}
 
 variable "components" {
-  default =
-  {
+  default = {
     frontend = {
      name = "frontend"
       instance_type="t3.small"
@@ -25,7 +21,7 @@ variable "components" {
     }
     catalogue = {
       name = "catalogue"
-      instance_type="t3.small"
+      instance_type="t3.micro"
     }
     redis = {
       name = "redis"
@@ -33,7 +29,7 @@ variable "components" {
     }
     user = {
       name = "user"
-      instance_type="t3.small"
+      instance_type="t3.micro"
     }
     cart = {
       name = "cart"
@@ -45,7 +41,7 @@ variable "components" {
     }
     shipping = {
       name = "shipping"
-      instance_type="t3.small"
+      instance_type="t3.micro"
     }
     rabbitmq = {
       name = "rabbitmq"
