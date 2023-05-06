@@ -15,7 +15,7 @@ provisioner "remote-exec" {
   connection {
     type     = "ssh"
     user     = "centos"
-    password = "Devops321"
+    password = "DevOps321"
     host     = self.private_ip
   }
   inline = [
