@@ -39,3 +39,4 @@ resource "aws_route53_record" "records" {
   records = [aws_instance.instance[each.value["name"]].private_ip]
 }
 
+
