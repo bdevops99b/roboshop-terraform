@@ -22,6 +22,7 @@ resource "null_resource" "provisioner" {
       "git clone https://github.com/bdevops99b/roboshop-shell.git",
       "cd roboshop-shell",
       "sudo bash ${var.component_name}.sh ${var.password}"
+
     ]
   }
 }
