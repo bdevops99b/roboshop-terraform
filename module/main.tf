@@ -9,6 +9,7 @@ resource "aws_instance" "instance" {
 }
 resource "null_resource" "provisioner" {
   depends_on = [aws_instance.instance,aws_route53_record.records]
+  count = var.provisioner ? 1 : 0
   provisioner "remote-exec" {
 
     connection {
