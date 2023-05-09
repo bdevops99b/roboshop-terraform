@@ -32,7 +32,7 @@ resource "aws_route53_record" "records" {
   zone_id = "Z09749362E9LBLZIEGY8G"
   #name    = "${each.value["name"]}-dev.pand4u.online"  #getting duplicate of pand4u.online
   #name     = "${var.component_name}-dev.swedev99.online"
-  name    = "${var.component_name}-dev.pand4u.online." # This is working fine
+  name    = "${var.component_name}-dev.pand4u.online" # This is working fine
   type    = "A"
   ttl     = 30
   records = [aws_instance.instance.private_ip]
