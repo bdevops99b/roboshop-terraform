@@ -2,7 +2,7 @@ resource "aws_instance" "instance" {
   ami      = data.aws_ami.centos.image_id
   instance_type = var.instance_type
   vpc_security_group_ids = [ data.aws_security_group.allow-all.id ]
-
+  iam_instance_profile = aws_iam_instance_profile.instance_profile.name
   tags = {
     Name = local.name
   }
@@ -51,6 +51,10 @@ resource "aws_iam_role" "role" {
   tags = {
     tag-key = "${var.component_name}-${var.env }-role"
   }
+}
+resource "aws_iam_instance_profile" "instance_profile" {
+  name = "${var.component_name}-${var.env }-role"
+  role = aws_iam_role.role.name
 }
 
 resource "aws_iam_role_policy" "ssm-ps-policy" {
