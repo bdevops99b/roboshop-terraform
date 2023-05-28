@@ -24,7 +24,7 @@ resource "null_resource" "provisioner" {
 resource "aws_route53_record" "records" {
 
   zone_id = "Z09749362E9LBLZIEGY8G"
-  #name    = "${each.value["name"]}-dev.pand4u.online"  #getting duplicate of pand4u.online
+  #name    = "${each.value["name"]}-dev.panda4u.online"  #getting duplicate of panda4u.online
   #name     = "${var.component_name}-dev.swedev99.online"
   name    = "${var.component_name}-dev" # This is working fine
   type    = "A"
