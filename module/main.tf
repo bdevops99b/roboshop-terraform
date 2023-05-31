@@ -23,7 +23,7 @@ resource "null_resource" "provisioner" {
 }
 resource "aws_route53_record" "records" {
 
-  zone_id = "Z09749362E9LBLZIEGY8G"
+  zone_id = "Z04892891UTN0AFUAHK4"
   #name    = "${each.value["name"]}-dev.panda4u.online"  #getting duplicate of panda4u.online
   #name     = "${var.component_name}-dev.swedev99.online"
   name    = "${var.component_name}-dev" # This is working fine
@@ -69,7 +69,6 @@ resource "aws_iam_role_policy" "ssm-ps-policy" {
         "Sid": "VisualEditor0",
         "Effect": "Allow",
         "Action": [
-          "kms:GetParametersForImport",
           "kms:Decrypt",
           "ssm:GetParameterHistory",
           "ssm:GetParametersByPath",
@@ -77,8 +76,8 @@ resource "aws_iam_role_policy" "ssm-ps-policy" {
           "ssm:GetParameter"
         ],
         "Resource": [
-          "arn:aws:kms:us-east-1:278280077392:key/50f72021-fbd2-4087-bb3f-7782291eaff6",
-          "arn:aws:ssm:us-east-1:278280077392:parameter/${var.env}.${var.component_name}.*"
+          "arn:aws:kms:us-east-1:808521593429:key/0e9d2058-45b4-40b9-8eb3-677118252e17",
+          "arn:aws:ssm:us-east-1:808521593429:parameter/${var.env}.${var.component_name}.*"
         ]
       }
     ]
