@@ -1,5 +1,4 @@
-locals
-{
+locals {
   tags = {
     business_unit = "ecommerce"
     business_type = "retails"
