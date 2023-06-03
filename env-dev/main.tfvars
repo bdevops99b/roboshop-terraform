@@ -31,12 +31,12 @@ vpc = {
 app = {
   frontend = {
     name = "frontend"
-    instance = "t3.micro"
+    instance_type = "t3.micro"
     subnet_name = "web"
   }
   catalogue = {
     name = "catalogue"
-    instance = "t3.small"
+    instance_type = "t3.small"
     subnet_name = "app"
   }
 }
