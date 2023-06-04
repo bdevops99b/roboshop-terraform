@@ -1,5 +1,6 @@
 module "vpc" {
   source = "git::https://github.com/bdevops99b/tf-module-vpc.git"
+
   for_each = var.vpc
   cidr_block  = each.value["cidr_block"]
   subnets = each.value["subnets"]
@@ -18,7 +19,6 @@ module "app" {
   min_size = each.value["min_size"]
 
   env = var.env
-
   bastion_cidr = var.bastion_cidr
   tags = local.tags
 
