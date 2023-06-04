@@ -82,9 +82,9 @@ module "elasticcache" {
   kms_arn = var.kms_arn
 }
 
+
 module "rabbitmq" {
   source = "git::https://github.com/bdevops99b/tf-module-amazon-mq.git"
-
 
   for_each      = var.rabbitmq
   subnets       = lookup(lookup(lookup(lookup(module.vpc, "main", null), "subnets", null), each.value["subnet_name"], null), "subnet_ids", null)
@@ -99,4 +99,3 @@ module "rabbitmq" {
   bastion_cidr = var.bastion_cidr
   domain_id    = var.domain_id
 }
-
