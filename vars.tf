@@ -11,3 +11,4 @@ variable "kms_arn" {}
 variable "docdb" {}
 variable "rds" {}
 variable "elasticcache" {}
+variable "rabbitmq" {}
