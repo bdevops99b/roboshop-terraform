@@ -150,9 +150,6 @@ alb = {
     internal = false
 
   }
-}
-
-alb = {
   private = {
     name = "private"
     subnet_name   = "private"
@@ -161,3 +158,4 @@ alb = {
 
   }
 }
+
