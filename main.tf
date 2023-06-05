@@ -64,7 +64,7 @@ module "rds" {
   kms_arn = var.kms_arn
 }
 
-module "elasticcache" {
+module "elasticache" {
   source = "git::https://github.com/bdevops99b/tf-module-elasticcache.git"
 
   for_each       = var.elasticache
