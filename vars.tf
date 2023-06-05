@@ -12,6 +12,6 @@ variable "domain_id" {}
 
 variable "docdb" {}
 variable "rds" {}
-variable "elasticcache" {}
+variable "elasticache" {}
 variable "rabbitmq" {}
 variable "alb" {}

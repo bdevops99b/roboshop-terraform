@@ -123,7 +123,7 @@ rds = {
   }
 }
 
-elasticcache = {
+elasticache = {
   main = {
     subnet_name             = "db"
     allow_db_cidr           = "app"
