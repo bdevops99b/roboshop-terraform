@@ -103,6 +103,7 @@ module "app" {
   desired_capacity = each.value["desired_capacity"]
   max_size = each.value["max_size"]
   min_size = each.value["min_size"]
+  for_each = each.value["app_port"]
 
   subnet_ids = lookup(lookup(lookup(lookup(module.vpc, "main", null), "subnets", null), each.value["subnet_name"], null), "subnet_ids", null)
   vpc_id = lookup(lookup(module.vpc, "main", null), "vpc_id", null)
