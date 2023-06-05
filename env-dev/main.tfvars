@@ -43,7 +43,7 @@ app = {
     allow_app_cidr = "public"
     desired_capacity   = 1
     max_size           = 10
-    min_size           = 2
+    min_size           = 1
 
   }
   catalogue = {
@@ -53,7 +53,7 @@ app = {
     allow_app_cidr = "web"
     desired_capacity   = 1
     max_size           = 10
-    min_size           = 2
+    min_size           = 1
   }
 #  user = {
 #    name = "user"
