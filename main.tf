@@ -105,12 +105,13 @@ module "app" {
   min_size = each.value["min_size"]
   app_port = each.value["app_port"]
   listener_priority = each.value["listener_priority"]
+  dns_name  = lookup(var.app, each.value["dns_name"], "${each.value["name"]}-${var.env}")
 
   subnet_ids = lookup(lookup(lookup(lookup(module.vpc, "main", null), "subnets", null), each.value["subnet_name"], null), "subnet_ids", null)
   vpc_id = lookup(lookup(module.vpc, "main", null), "vpc_id", null)
   allow_app_cidr = lookup(lookup(lookup(lookup(module.vpc, "main", null), "subnets", null), each.value["allow_app_cidr"], null), "subnet_cidrs", null)
   listener_arn   = lookup(lookup(module.alb, each.value["lb_type"], null), "listener_arn", null)
-  dns_name    = lookup(lookup(module.alb, each.value["lb_type"], null), "dns_name", null)
+  lb_dns_name    = lookup(lookup(module.alb, each.value["lb_type"], null), "dns_name", null)
   env = var.env
   bastion_cidr = var.bastion_cidr
   tags = local.tags
