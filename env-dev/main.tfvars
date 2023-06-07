@@ -46,7 +46,7 @@ app = {
     min_size           = 1
     app_port           =80
     listener_priority = 1
-   # lb_type           = public
+   lb_type           = public
 
   }
   catalogue = {
@@ -59,7 +59,7 @@ app = {
     min_size           = 1
     app_port           =8080
     listener_priority = 1
-    #lb_type           = private
+    lb_type           = private
   }
 #  user = {
 #    name = "user"
