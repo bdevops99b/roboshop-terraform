@@ -62,7 +62,7 @@ app = {
     app_port           =8080
     listener_priority = 1
     lb_type           = "private"
-    parameters        = "docdb"
+    parameters        = ["docdb"]
 
   }
 #  user = {
