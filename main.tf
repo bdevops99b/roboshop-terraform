@@ -105,7 +105,7 @@ module "app" {
   min_size = each.value["min_size"]
   app_port = each.value["app_port"]
   listener_priority = each.value["listener_priority"]
-  dns_name  = lookup(var.app, each.value["dns_name"], "${each.value["name"]}-${var.env}")
+  dns_name  = each.value["name"] == "frontend" ? each.value["dns_name"] : "${each.value["name"]}-${var.env}"
 
   subnet_ids = lookup(lookup(lookup(lookup(module.vpc, "main", null), "subnets", null), each.value["subnet_name"], null), "subnet_ids", null)
   vpc_id = lookup(lookup(module.vpc, "main", null), "vpc_id", null)
