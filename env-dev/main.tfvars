@@ -65,53 +65,57 @@ app = {
     parameters        = ["docdb"]
 
   }
-#  user = {
-#    name = "user"
-#    instance_type = "t3.small"
-#    subnet_name = "app"
-#    desired_capacity   = 2
-#    max_size           = 10
-#    min_size           = 2
-#  }
-#  cart = {
-#    name = "catalogue"
-#    instance_type = "t3.small"
-#    subnet_name = "app"
-#    desired_capacity   = 2
-#    max_size           = 10
-#    min_size           = 2
-#  }
-#  shipping = {
-#    name = "catalogue"
-#    instance_type = "t3.small"
-#    subnet_name = "app"
-#    desired_capacity   = 2
-#    max_size           = 10
-#    min_size           = 2
-#  }
-#  payment = {
-#    name = "catalogue"
-#    instance_type = "t3.small"
-#    subnet_name = "app"
-#    desired_capacity   = 2
-#    max_size           = 10
-#    min_size           = 2
-#  }
+  user = {
+    name = "user"
+    instance_type = "t3.small"
+    subnet_name = "app"
+    desired_capacity   = 2
+    max_size           = 10
+    min_size           = 2
+    app_port           =8080
+    listener_priority = 2
+    lb_type           = "private"
+    parameters        = ["docdb"]
+  }
+  cart = {
+    name = "catalogue"
+    instance_type = "t3.small"
+    subnet_name = "app"
+    desired_capacity   = 1
+    max_size           = 10
+    min_size           = 1
+    app_port           =8080
+    listener_priority = 3
+    lb_type           = "private"
+    parameters        = []
+  }
+  shipping = {
+    name = "catalogue"
+    instance_type = "t3.small"
+    subnet_name = "app"
+    desired_capacity   = 1
+    max_size           = 10
+    min_size           = 1
+    app_port           =8080
+    listener_priority = 4
+    lb_type           = "private"
+    parameters        = ["rds"]
+
+  }
+  payment = {
+    name = "catalogue"
+    instance_type = "t3.small"
+    subnet_name = "app"
+    desired_capacity   = 1
+    max_size           = 10
+    min_size           = 1
+    app_port           =8080
+    listener_priority = 5
+    lb_type           = "private"
+    parameters        = [""]
+  }
 
 }
-#variable "tags" {}
-#variable "subnets" {}
-#variable "env" {}
-#variable "name" {
-#  default = "docdb"
-#}
-#variable "vpc_id" {}
-#variable "allow_app_cidr" {}
-#variable "engine_version" {}
-#variable "kms_arn" {}
-#variable "port_no" {
-#  default = 27017
-#}
 
 docdb = {
   main = {
