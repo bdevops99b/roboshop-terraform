@@ -116,8 +116,6 @@ app = {
     parameters        = []
   }
 }
-
-
 docdb = {
   main = {
     subnet_name    = "db"
