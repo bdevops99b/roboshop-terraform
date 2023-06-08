@@ -90,7 +90,7 @@ module "alb" {
   tags         = local.tags
   env          = var.env
   vpc_id       = local.vpc_id
-#
+
 }
 
 module "app" {
@@ -119,7 +119,7 @@ module "app" {
   domain_name = var.domain_name
   domain_id = var.domain_id
   kms_arn = var.kms_arn
-
+  monitor_cidr = var.monitor_cidr
 
 }
 
