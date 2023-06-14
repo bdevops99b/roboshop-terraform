@@ -92,12 +92,12 @@ app = {
   }
   shipping = {
     name              = "shipping"
-    instance_type     = "t3.small"
+    instance_type     = "t3.medium"
     subnet_name       = "app"
     allow_app_cidr    = "app"
-    desired_capacity  = 2
+    desired_capacity  = 4
     max_size          = 10
-    min_size          = 2
+    min_size          = 4
     app_port          = 8080
     listener_priority = 4
     lb_type           = "private"
