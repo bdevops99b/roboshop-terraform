@@ -1,6 +1,6 @@
 env = "prod"
 monitor_cidr = ["172.31.80.236/32"]
-bastion_cidr = ["172.31.93.88/32"]
+bastion_cidr = ["172.31.86.195/32"]
 default_vpc_id = "vpc-0031a3556931f8c23"
 default_vpc_cidr = "172.31.0.0/16"
 default_vpc_rtid = "rtb-0b759e2fd83da83c7"
