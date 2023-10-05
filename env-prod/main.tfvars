@@ -1,12 +1,12 @@
 env = "prod"
 monitor_cidr = ["172.31.91.219/32"]
-bastion_cidr = ["172.31.86.195/32"]
+bastion_cidr = ["172.31.31.251/32"]
 default_vpc_id = "vpc-0031a3556931f8c23"
 default_vpc_cidr = "172.31.0.0/16"
 default_vpc_rtid = "rtb-0b759e2fd83da83c7"
 domain_name      = "panda4u.online"
-domain_id        = "Z07261131TWTABGF77UVC"
-kms_arn = "arn:aws:kms:us-east-1:193400300103:key/4577942f-9fbc-4247-84f6-e31cdf26ac63"
+domain_id        = "Z045112332RP1FXH8ZTXW"
+kms_arn = "arn:aws:kms:us-east-1:193400300103:key/93495d82-fd8d-4def-b938-7fa93ac14b42"
 vpc = {
   main = {
     cidr_block = "10.100.0.0/16"
